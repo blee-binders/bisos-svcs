@@ -35,9 +35,55 @@
 ####+BEGIN: blee:bxPanel:foldingSection :outLevel 1 :title "Overview" :anchor "Panel"
 * [[elisp:(show-all)][(>]]  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_  _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_       [[elisp:(org-cycle)][| *Overview:* |]] <<Panel>>   [[elisp:(org-shifttab)][<)]] E|
 ####+END
-** 
+** +
 ** Overview Comes Here.
 ** B|
+*      ################          /Foundational Services/
+*       *BUE/BACS -- System Monitoring (Disk, Mem, CPU, Proc)*   [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs//bxServices/servicesManage/bxSystemMonitor")][Platform Monitor]]
+*       *BUE/BACS -- Foundational  -- Process Supervision*       [[elisp:(find-file "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxSupervision/fullUsagePanel-en.org")][BxSupervision]]  || [[elisp:(find-file "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxSupervision/systemd/fullUsagePanel-en.org")][SystemD]] || [[elisp:(find-file "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxSupervision/daemontools/fullUsagePanel-en.org")][Daemontools (Svc)]] || [[elisp:(find-file "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxSupervision/sysVinitd/fullUsagePanel-en.org")][SysV (init.d)]]
+*       *DNS Services (Read/Cache) - (content) - (Resolving)*    [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/dnsManage")][BACS Manage DNS]] ||  [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/dnsManage/dnsDiag")][Dns Diagnostics]]
+*      ======[[elisp:(org-cycle)][Fold]]======      *SSH Authorization*  [[elisp:(org-cycle)][| ]]
+**      ====[[elisp:(org-cycle)][Fold]]==== NOTYET add /opt/public/osmt/bin/bxuSshAccess.sh
+** On Local Machine Verify
+***  [[elisp:(lsip-local-run-command "/opt/public/osmt/bin/mmaSshAdmin.sh -p localUser=lsipusr -i userKeyVerify")][mmaSshAdmin.sh -p localUser=lsipusr -i userKeyVerify]]
+     If
+     SSH User Priv/Pub keys is NOT in place
+     run
+***  [[elisp:(lsip-local-run-command "/opt/public/osmt/bin/mmaSshAdmin.sh -p localUser=lsipusr -i userKeyUpdat")][mmaSshAdmin.sh -p localUser=lsipusr -i userKeyUpdate]]
+
+** On Local Machine Specify Remote Host's address/domain and run
+
+***  [[elisp:(lsip-local-run-command "echo
+/opt/public/osmt/bin/mmaSshAdmin.sh -p localUser=lsipusr -p remoteUser=lsipusr -p remoteHost=XXX  -i authorizedKeysUpdate")][mmaSshAdmin.sh -p localUser=lsipusr -p remoteUser=lsipusr -p remoteHost=XXX -i authorizedKeysUpdate]]
+
+     You will then be prompted for the password
+*      ================          /Mail Services/
+*       *ALL  -- ALL                -- Mail Services*            [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxEmail")][Mail Services Overview]]
+*       *BUE  -- Gnus MUA           -- Mail Services*            [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/mailCompose")][Blee Mail Sending]]   [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/mailRead")][Blee Mail Receiving]]
+*       *BUE  -- MUAs+Resident MTA  -- Mail Services*            [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/mailManage")][MUAs and Resident MS+MTA-Access]]
+*       *BACS -- M-Access Service   -- Mail Services*            [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs//bxServices/servicesManage/bxMailAccess")][By* Mail Access -- Courier+ Service Agent]]
+*       *BxISO -- Folder and Addrs  -- Mail Services*            [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxsoMailAddr")][ByIso Mail Address And Folder Management]]
+*       *BACS -- MTA Service        -- Mail Services*            [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs//bxServices/servicesManage/bxMailMta")][By* Mail MTA -- Qmail+ Service Agent]]
+*      ================          /Web Services/
+*       *BUE  -- Plone3 Site Developement*                       [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/ploneProc")][Plone Site Development]]
+*       *BUE  -- Django Site Developement*                       [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/djangoProc")][Django Site Development]]
+*       *BUE+BACS -- Web Content Development*                    [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/webDev")][Web Content Development]]
+*       *BACS -- Web Service Agents*                             [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxWebServices")][Web Server and Site Services]]
+*       *BUE  -- Galleria / Slider*                              [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/galleria")][Galleria / Sliders]]
+*       *BUE  -- Genealogy*                                      [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/genealogy")][Genealogy / Geneweb]]
+*       *BACS -- WebMail (Squirrelmail)*                         [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxWebMail")][WebMail (Squirrelmail) Panel]]
+*       *BUE  -- Perl Gallery v1 -- Obsoleted By Galleria*       [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/perlGallery")][Perl Gallery]]
+*      ================          /Document Processing/
+*       *BUE  -- Document Processing/Publication (Lcnt)*         [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/lcntPublications")][Lcnt Proc]] -- (XeLaTeX Processing)
+*       *BUE  -- Photos/Images Processing/Publication*           [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/photoManage")][Photo/Image Processing]]
+*       *BUE  -- Videos/Presentations Processing/Publication*    [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/videoProc")][Audio/Video Production/Processing]]
+*       *BUE  -- ScreenCast*                                     [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/screencasting")][ScreenCasting]]
+*      ================          /Audio/Video Consumption/
+*       *BUE  -- Audio/Music*                                    [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/multimedia/")][Audio/Music/Video Consumption]]
+*      ================          /Misc/
+*       *ALL  -- Programming -- Software Development*            [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/softwareDev")][Software Development]]
+*      ================
+
 ####+BEGIN: blee:bxPanel:separator :outLevel 1
 * /[[elisp:(beginning-of-buffer)][|^]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]] [[elisp:(delete-other-windows)][|1]]/
 ####+END
