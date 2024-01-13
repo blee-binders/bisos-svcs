@@ -16,7 +16,7 @@ SEED="
 *  /[dblock]/ /Seed/ :: [[file:/bisos/core/bsip/bin/seedFtoCommon.sh]] |
 "
 FILE="
-*  /This File/ :: /bisos/git/auth/bxRepos/blee-binders/bisos-svcs/ftoProc.sh
+*  /This File/ :: /bisos/panels/bisos-svcs/ftoProc.sh
 "
 if [ "${loadFiles}" == "" ] ; then
     /bisos/core/bsip/bin/seedFtoCommon.sh -l $0 "$@"
@@ -59,6 +59,7 @@ _CommentEnd_
 nodesList="
 email
 _nodeBase_
+supervision
 "
 # }}} DBLOCK-nodesList
 ####+END:
