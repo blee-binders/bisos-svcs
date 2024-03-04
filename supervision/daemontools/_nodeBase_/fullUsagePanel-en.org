@@ -33,9 +33,51 @@
 ####+BEGIN: blee:bxPanel:foldingSection :outLevel 1 :title "Overview" :anchor "Panel"
 * [[elisp:(show-all)][(>]]  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_  _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_       [[elisp:(outline-show-subtree+toggle)][| *Overview:* |]] <<Panel>>   [[elisp:(org-shifttab)][<)]] E|
 ####+END
-**
+** +
 ** Overview Comes Here.
 ** B|
+*  [[elisp:(org-cycle)][| ]]  Model and Info     ::   /Roadmap -- Detailed And Complete/ [[elisp:(org-cycle)][| ]]
+**  [[elisp:(org-cycle)][| ]]  Daemontools       ::  Daemontools Overview [[elisp:(org-cycle)][| ]]
+***  init (process 1) looks at /etc/init/svscan.conf
+***  /usr/bin/svscanboot is specified in /etc/init/svscan.conf and is invoked
+***  svscan /etc/service is invoked from svscanboot
+***  readproctitle receives stdout/stderr of svscan
+***  one  supervise(8) is started and maintained by svscan for each subdir in  /etc/service.
+***  ./run script from /etc/service/xx is monitored and restarted.
+***  svc/svstat/etc collaborate with supervise
+**  [[elisp:(org-cycle)][| ]]  Daemontools       ::  Daemontools Components [[elisp:(org-cycle)][| ]]
+*** envdir: runs another program with environment modified according to files in a specified directory.
+*** envuidgid: runs another program with environment variables indicating a specified account's uid and gid.
+*** multilog: reads a sequence of lines from stdin and appends selected lines to any number of logs.
+*** readproctitle: maintains an automatically rotated log in memory for inspection by ps(1).
+*** setlock: runs another program with a file locked.
+*** setuidgid: runs another program under a specified account's uid and gid.
+*** softlimit: runs another program with new resource limits.
+*** supervise: starts and monitors a service.
+*** svc: controls services monitored by supervise(8).
+*** svok: checks whether supervise(8) is running.
+*** svscan: starts and monitors a collection of services
+*** svscanboot: starts svscan(8) in the /service directory, with output and error messages logged through readproctitle(8).
+*** svstat: prints the status of services monitored by supervise(8).
+*** svup: checks whether supervise(8) has started a service.
+*** tai64n: puts a precise timestamp on each line.
+*** tai64nlocal: converts precise TAI64N timestamps to a human-readable format.
+**  [[elisp:(org-cycle)][| ]]  Runit             ::  Runit [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]]  Panel IIMs         ::           *Panel IIMs Invoke and Visit Xrefs*      <<Xref->>  [[elisp:(org-cycle)][| ]]
+**  [[elisp:(beginning-of-buffer)][Top]] ############ [[elisp:(delete-other-windows)][(1)]]   Lca BinsPreps Invokes and Xrefs:
+   BxSupervision includes the following parts:
+**  [[file:/opt/public/osmt/bin/lcaDaemontoolsBinsPrep.sh::Xref-Here-][lcaDaemontoolsBinsPrep.sh]]
+**  [[elisp:(lsip-local-run-command%20"mmaDaemontoolsAdmin.sh")][mmaDaemontoolsAdmin.sh]]
+*  [[elisp:(beginning-of-buffer)][Top]] #####################  [[elisp:(delete-other-windows)][(1)]]      *init process (1) hook*
+*     BxP                 ::  [[elisp:(lsip-local-run-command%20"pgrep -l svscan")][pgrep -l svscan #(svscanboot and svscan)]] [[elisp:(org-cycle)][| ]]
+*      ================
+*  [[elisp:(beginning-of-buffer)][Top]] #####################  [[elisp:(delete-other-windows)][(1)]]      *Services Inspet*
+*  [[elisp:(org-cycle)][| ]]  BxP                 ::  [[elisp:(lsip-local-run-command%20"lcaDaemontoolsAdmin.sh")][lcaDaemontoolsAdmin.sh]] + Config Files + Processes [[elisp:(org-cycle)][| ]]
+**  [[elisp:(org-cycle)][| ]]  Daemontools        ::  [[elisp:(lsip-local-run-command%20"lcaDaemontoolsAdmin.sh -h -v -n showRun -i fullReport")][lcaDaemontoolsAdmin.sh -h -v -n showRun -i fullReport]] [[elisp:(org-cycle)][| ]]
+**  [[elisp:(org-cycle)][| ]]  Daemontools        ::  [[elisp:(lsip-local-run-command%20"lcaDaemontoolsAdmin.sh -h -v -n showRun -i mmaDaemonList")][lcaDaemontoolsAdmin.sh -h -v -n showRun -i mmaDaemonList]] [[elisp:(org-cycle)][| ]]
+**  [[elisp:(org-cycle)][| ]]  /etc/service       ::   daemontools::  [[file:/etc/service/]]  -- Damontools Services Directory [[elisp:(org-cycle)][| ]]
+**  [[elisp:(org-cycle)][| ]]  Procs              ::   [[elisp:(lsip-local-run-command "ps -fp $(pgrep 'supervise|multilog')")][ps -fp $(pgrep 'supervise|multilog')]]
+**  [[elisp:(org-cycle)][| ]]  Procs              ::   [[elisp:(lsip-local-run-command%20"ps -fp $(pgrep readproctitle)")][ps -fp $(pgrep readproctitle)]]                      # Are There Problems With Any Of Supervised Processes [[elisp:(org-cycle)][| ]]
 ####+BEGIN: blee:bxPanel:separator :outLevel 1
 * /[[elisp:(beginning-of-buffer)][|^]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]] [[elisp:(delete-other-windows)][|1]]/
 ####+END

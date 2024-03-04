@@ -55,9 +55,32 @@ COMMAND    PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 dnsmasq  31227  nobody    5u  IPv4  89013      0t0  UDP HSS-1008:domain 
 dnsmasq  31227  nobody    6u  IPv4  89014      0t0  TCP HSS-1008:domain (LISTEN)
 tinydns 187635 tinydns    3u  IPv4 503920      0t0  UDP HSS-1008:domain 
-
-* [[elisp:(org-shifttab)][<)]] E|
-####+END:
+* +
+* aFqdn:              [[elisp:(setq bx:iimBash:aFqdn "")][""]] | [[elisp:(bx:valueReader:symbol 'bx:bxpCmnd:aFqdn)][Any]] | [[elisp:(setq bx:bxpCmnd:aFqdn "www.example.com")][www.example.com]] | [[elisp:(setq bx:iimBash:aFqdn "www.by-star.net")][www.by-star.net]]
+* aIpAddr:            [[elisp:(setq bx:iimBash:aIpAddr "")][""]] | [[elisp:(bx:valueReader:symbol 'bx:bxpCmnd:aIpAddr)][Any]] | [[elisp:(setq bx:bxpCmnd:aIpAddr "8.8.8.8")][8.8.8.8]]
+* Execute Command Line:   [[elisp:(bx:iimBash:cmndLineExec)][Run Cmnd Line]] | [[elisp:(bx:iimBash:cmndLineExec :wrapper "echo")][Echo Cmnd Line]]
+*      DNS Resolv Name      ::  [[elisp:(bx:bxpCmnd:cmndLineExec :name "dnsip" :aFqdn t)][dnsip aFqdn]]
+*      DNS Resolv IP-Addr   ::  [[elisp:(bx:bxpCmnd:cmndLineExec :name "dnsname" :aIpAddr t)][dnsname aIpAddr]] ||
+*         *lcaDnsReports -- bystarDnsReports -- Diagnostics, Verification, Probing, Information*  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+**     Main Facilities:    [[elisp:(lsip-local-run-command "lcaDnsReport.sh")][lcaDnsReport.sh]]  [[elisp:(lsip-local-run-command "bystarDnsReport.sh")][bystarDnsReport.sh]]
+**         Brief Description Of Main Facilities:  [[elisp:(lsip-local-run-command "bystarDnsReport.sh -i dnsSeeAlso")][bystarDnsReport.sh -i dnsSeeAlso]]
+**     ============  Diagnostics
+***        lcaDnsReport.sh -h -v -n showRun -i diagFull persoarabic.org
+* http://cr.yp.to/djbdns/debugging.html
+* dnsip www.neda.com
+* dnsname 198.62.92.134
+* dnsmx 198.62.92.134
+* [[elisp:(lsip-local-run-command "dnsmx example.com | cut -d ' ' -f 2 | xargs dnsip")][dnsmx example.com | cut -d ' ' -f 2 | xargs dnsip]]
+* dnsqr any byname.net
+* dnsq any byname.net 198.62.92.1
+* cd /etc/tinydns/root; tinydns-get ns example.com
+* cd /etc/tinydns/root; tinydns-get any example.com ipAddr
+* --- Other Resoling Agents ---
+* host www.example.com
+* echo "dig -x 198.62.92.10"
+* echo "dig www.neda.com"
+* apt-get install fpdns
+* fpdns 198.62.92.1  # fingerPrint revision
 
 ####+BEGIN: blee:bxPanel:separator :outLevel 1
 * /[[elisp:(beginning-of-buffer)][|^]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]] [[elisp:(delete-other-windows)][|1]]/
