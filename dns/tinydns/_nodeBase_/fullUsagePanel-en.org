@@ -1,4 +1,4 @@
-* B|
+/bisos/git/auth/bxRepos/blee-binders/connectivity/dnsResolution* B|
 ####+BEGIN: bxPanel:common/title-plus
 #+title: dns/tinydns
 #+roam_tags: branch
@@ -41,6 +41,78 @@ SCHEDULED: <2024-03-03 Sun>
 * TODO Capture /bisos/asc/dns/bin/svcTinydnsSysdAdmin.sh -- Add IP env configuration
 SCHEDULED: <2024-03-03 Sun>
 * -B|
+*         *Related:*    [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/dnsManage/roadmap")][RoadMap]] || https://cr.yp.to/djbdns/blurb/easeofuse.html || https://cr.yp.to/djbdns.html
+*  [[elisp:(org-cycle)][| ]]  [BACS]        ::      /Xrefs:/       *<<Xref-BxDns>>  [[elisp:(org-cycle)][| ]]
+**      ====[[elisp:(org-cycle)][Fold]]===+  Sources/Modules Xrefs:
+    BxDns includes the following parts:
+***  [[file:/opt/public/osmt/bin/lcaDjbdnsBinsPrep.sh::Xref-Here-][Visit lcaDjbdnsBinsPrep.sh]]  ||  [[elisp:(lsip-local-run-command "lcaDjbdnsBinsPrep.sh")][lcaDjbdnsBinsPrep.sh]]
+*  [[elisp:(beginning-of-buffer)][Top]] ################ [[elisp:(delete-other-windows)][(1)]]
+*      ================
+*         *lcaDnsReports -- bystarDnsReports -- Diagnostics, Verification, Probing, Information*  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+**     Main Facilities:    [[elisp:(lsip-local-run-command "lcaDnsReport.sh")][lcaDnsReport.sh]]  [[elisp:(lsip-local-run-command "bystarDnsReport.sh")][bystarDnsReport.sh]]
+**         Brief Description Of Main Facilities:  [[elisp:(lsip-local-run-command "bystarDnsReport.sh -i dnsSeeAlso")][bystarDnsReport.sh -i dnsSeeAlso]]
+**     ============  Diagnostics
+***        lcaDnsReport.sh -h -v -n showRun -i diagFull persoarabic.org
+*      ================
+*         *lcaDns Platform Content and Read: Process/Services Status/Logs/*  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+**     Main Facilities:    [[elisp:(lsip-local-run-command "mmaDnsServerHosts.sh")][mmaDnsServerHosts.sh]]
+**     ============ Information
+**     Show All Running Processes:      [[elisp:(lsip-local-run-command "mmaDnsServerHosts.sh -h -v -n showRun -i servicesShow all")][mmaDnsServerHosts.sh -h -v -n showRun -i servicesShow all]]
+**     Show Logs:                       [[elisp:(lsip-local-run-command "mmaDnsServerHosts.sh -h -v -n showRun -i logsList")][mmaDnsServerHosts.sh -h -v -n showRun -i logsList]]
+***       dnscache log:                 [[elisp:(lsip-local-run-command "tail -50 /etc/dnscache/log/main/current | tai64nlocal")][tail -50 /etc/dnscache/log/main/current | tai64nlocal]]
+***       tinydns  log:                 [[elisp:(lsip-local-run-command "tail -50 /etc/tinydns/log/main/current | tai64nlocal")][tail -50 /etc/tinydns/log/main/current | tai64nlocal]]
+*      ================
+*         *lcaDns Platform Resolution (resolv.conf -- dnscache)*  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+**     Main Facilities:    [[elisp:(lsip-local-run-command "bystarDnsResolvAdmin.sh")][bystarDnsResolvAdmin.sh]]  lcaDnsReport.sh
+**     ============ Information
+**     Show /etc/resolv.conf:            [[elisp:(lsip-local-run-command "cat /etc/resolv.conf")][cat /etc/resolv.conf]]
+**     ============ Resolution Modifications
+**     Replace /etc/resolv.conf:
+***       Just dnscache localhost     [[elisp:(lsip-local-run-command "bystarDnsResolvAdmin.sh")][bystarDnsResolvAdmin.sh]]
+***       dnscache local + Bx Pub Res
+***       Bx Public Resolvers
+***       ISPs Public Resolvers
+**     ============ dnscache
+***    Cache Restart:       [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/mmaDnsServerHosts.sh -h -v -n showRun -i cacheRestart")][sudo mmaDnsServerHosts.sh -h -v -n showRun -i cacheRestart]]
+*      ================
+*         *<<bystarDns Platform Resolution>>*  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+**     Main Facilities:    [[elisp:(lsip-local-run-command "bystarDnsResolvAdmin.sh")][bystarDnsResolvAdmin.sh]]
+**     ============ Information
+**     Show All Local DNS Resolutions:  [[elisp:(lsip-local-run-command "egrep -H ^. /etc/dnscache/root/servers/*")][egrep -H ^. /etc/dnscache/root/servers/*]]
+**     Show All Local DNS Resolutions:  [[elisp:(lsip-local-run-command "bystarDnsResolvAdmin.sh -h -v -n showRun -p bystarUid=all -p DomainForm=all -i dnscacheFakeHereReport")][bystarDnsResolvAdmin.sh -p bystarUid=all -p DomainForm=all -i dnscacheFakeHereReport]]
+**     Show Current Buid Resolution:    [[elisp:(lsip-local-run-command "bystarDnsResolvAdmin.sh -h -v -n showRun -p bystarUid=current -p DomainForm=all -i dnscacheFakeHereReport")][bystarDnsResolvAdmin.sh -p bystarUid=current -p DomainForm=all -i dnscacheFakeHereReport]]
+**     Show Prompt Buid Resolution:     [[elisp:(lsip-local-run-command "bystarDnsResolvAdmin.sh -h -v -n showRun -p bystarUid=prompt -p DomainForm=all -i dnscacheFakeHereReport")][bystarDnsResolvAdmin.sh -p bystarUid=prompt -p DomainForm=all -i dnscacheFakeHereReport]]
+**     ============ Disable FakingHere
+**     FakeHereNot Everything:    [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsResolvAdmin.sh -h -v -n showRun -i dnscacheFakeHereDisableEverything")][bystarDnsResolvAdmin.sh -i  dnscacheFakeHereDisableEverything]]
+**     FakeHereNot all:           [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsResolvAdmin.sh -h -v -n showRun -p bystarUid=all -p DomainForm=all -i dnscacheFakeHereNot")][bystarDnsResolvAdmin.sh -p bystarUid=all -p DomainForm=all -i dnscacheFakeHereNot]]
+**     FakeHereNot Current Buid:  [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsResolvAdmin.sh -h -v -n showRun -p bystarUid=current -p DomainForm=all -i dnscacheFakeHereNot")][bystarDnsResolvAdmin.sh -p bystarUid=current -p DomainForm=all -i dnscacheFakeHereNot]]
+**     FakeHereNot Prompt Buid:   [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsResolvAdmin.sh -h -v -n showRun -p bystarUid=prompt -p DomainForm=all -i dnscacheFakeHereNot")][bystarDnsResolvAdmin.sh -p bystarUid=prompt -p DomainForm=all -i dnscacheFakeHereNot]]
+**     ============ Enable FakingHere
+**     FakeHere all:           [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsResolvAdmin.sh -h -v -n showRun -p bystarUid=all -p DomainForm=all -i dnscacheFakeHere")][bystarDnsResolvAdmin.sh -p bystarUid=all -p DomainForm=all -i dnscacheFakeHere]]
+**     FakeHere Current Buid:  [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsResolvAdmin.sh -h -v -n showRun -p bystarUid=current -p DomainForm=all -i dnscacheFakeHere")][bystarDnsResolvAdmin.sh -p bystarUid=current -p DomainForm=all -i dnscacheFakeHere]]
+**     FakeHere Prompt Buid:   [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsResolvAdmin.sh -h -v -n showRun -p bystarUid=prompt -p DomainForm=all -i dnscacheFakeHere")][bystarDnsResolvAdmin.sh -p bystarUid=prompt -p DomainForm=all -i dnscacheFakeHere]]
+*      ================
+*         *bystarDns Acct Content*
+*      ================
+*         *bystarDns Acct Export*  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+**     Main Facilities:    [[elisp:(lsip-local-run-command "bystarDnsAdmin.sh")][bystarDnsAdmin.sh]]   [[elisp:(lsip-local-run-command "bystarDnsInfoAdmin.sh")][bystarDnsInfoAdmin.sh]]
+**     ============ Per BUID Export Information
+**     Servers List For Current Buid:          [[elisp:(lsip-local-run-command "bystarDnsAdmin.sh -h -v -n showRun -p bystarUid=current -p DomainForm=all -i zoneMastersList")][bystarDnsAdmin.sh -p bystarUid=current -p DomainForm=all -i zoneMastersList]]
+**     Servers List For Prompt Buid:           [[elisp:(lsip-local-run-command "bystarDnsAdmin.sh -h -v -n showRun -p bystarUid=prompt -p DomainForm=all -i zoneMastersList")][bystarDnsAdmin.sh -p bystarUid=prompt -p DomainForm=all -i zoneMastersList]]
+**     ============ BACS Initial Preparations -- Ssh Keys Setup
+**     FakeHereNot Everything:          [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsAdmin.sh -h -v -n showRun -i exportPrepPlatformPrep")][bystarDnsAdmin.sh -i  exportPrepPlatformPrep]]
+**     exportPrepPlatformPrep:          [[elisp:(lsip-local-run-command "bystarDnsAdmin.sh -h -v -n showRun -p bystarUid=current -p DomainForm=all -i exportPrep")][bystarDnsAdmin.sh -p bystarUid=current -p DomainForm=all -i exportPrep]]
+**     exportPrepPlatformPrep:          [[elisp:(lsip-local-run-command "bystarDnsAdmin.sh -h -v -n showRun -p bystarUid=prompt -p DomainForm=all -i exportPrep")][bystarDnsAdmin.sh -p bystarUid=prompt -p DomainForm=all -i exportPrep]]
+**     ============ BUID Export
+**     Export Full Current Buid:(root)   [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsAdmin.sh -h -v -n showRun -p bystarUid=current -p DomainForm=all -i zonesExportFullUpdate")][bystarDnsAdmin.sh -p bystarUid=current -p DomainForm=all -i zonesExportFullUpdate]]
+**     Export Full Prompt Buid:(root)    [[elisp:(lsip-local-run-command "sudo /opt/public/osmt/bin/bystarDnsAdmin.sh -h -v -n showRun -p bystarUid=prompt -p DomainForm=all -i zonesExportFullUpdate")][bystarDnsAdmin.sh -p bystarUid=prompt -p DomainForm=all -i zonesExportFullUpdate]]
+*      ================
+*         *bystarDns Platform Content*
+*      ================
+*         *bystarDns Platform Export*
+*      ================
+*         *Autonomous DNS Target Management*     [[file:/libre/ByStar/InitialTemplates/activeDocs/bxServices/basaManage/fullUsagePanel-en.org::Autonomous Target Management -- Local Service vs Live Service][Autonomous Account Target Facilities]]
+
 ####+BEGIN: blee:bxPanel:separator :outLevel 1
 * /[[elisp:(beginning-of-buffer)][|^]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]] [[elisp:(delete-other-windows)][|1]]/
 ####+END
