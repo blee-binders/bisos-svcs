@@ -33,9 +33,10 @@
 * [[elisp:(show-all)][(>]]  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_  _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_       [[elisp:(outline-show-subtree+toggle)][| *Overview and Use Cases:* |]] <<Panel>>   /::Blank Starting Point::/  [[elisp:(org-shifttab)][<)]] E|
 ####+END
 ** +
-** Overview Comes Here.
+** This panel os for white box testing. It should be used on the 
 ** -B|
 * +
+* http://cr.yp.to/djbdns/debugging.html
 * -B|
 ####+BEGIN: blee:bxPanel:runResult :outLevel 1  :command "sudo netstat -lntup | grep ':53 '"  :results "stdout" :comment "udp port & proc" :afterComment ""
 * [[elisp:(show-all)][(>]] [[elisp:(blee:menu-sel:outline:popupMenu)][+-]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]]     [[elisp:(org-cycle)][| /stdout Results:/ |]]  [[elisp:(blee:org-update-named-dblocks-above)][D-Run]] :: [[elisp:(lsip-local-run-command "sudo netstat -lntup | grep ':53 '")][sudo netstat -lntup | grep ':53 ']] *|*  =udp port & proc= *|*    |
@@ -49,38 +50,40 @@ udp        0      0 192.168.121.1:53        0.0.0.0:*                           
 ####+END:
 ####+BEGIN: blee:bxPanel:runResult :outLevel 1  :command "sudo lsof -i :53"  :results "stdout" :comment "udp port & proc" :afterComment ""
 * [[elisp:(show-all)][(>]] [[elisp:(blee:menu-sel:outline:popupMenu)][+-]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]]     [[elisp:(org-cycle)][| /stdout Results:/ |]]  [[elisp:(blee:org-update-named-dblocks-above)][D-Run]] :: [[elisp:(lsip-local-run-command "sudo lsof -i :53")][sudo lsof -i :53]] *|*  =udp port & proc= *|*    |
-Last Executed at: 202403-03-17:03:38  by: bystar on: HSS-1008
+Last Executed at: 202403-03-18:29:50  by: bystar on: HSS-1008
 ----------------------------
 COMMAND    PID    USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 dnsmasq  31227  nobody    5u  IPv4  89013      0t0  UDP HSS-1008:domain 
 dnsmasq  31227  nobody    6u  IPv4  89014      0t0  TCP HSS-1008:domain (LISTEN)
 tinydns 187635 tinydns    3u  IPv4 503920      0t0  UDP HSS-1008:domain 
-* +
-* aFqdn:              [[elisp:(setq bx:iimBash:aFqdn "")][""]] | [[elisp:(bx:valueReader:symbol 'bx:bxpCmnd:aFqdn)][Any]] | [[elisp:(setq bx:bxpCmnd:aFqdn "www.example.com")][www.example.com]] | [[elisp:(setq bx:iimBash:aFqdn "www.by-star.net")][www.by-star.net]]
-* aIpAddr:            [[elisp:(setq bx:iimBash:aIpAddr "")][""]] | [[elisp:(bx:valueReader:symbol 'bx:bxpCmnd:aIpAddr)][Any]] | [[elisp:(setq bx:bxpCmnd:aIpAddr "8.8.8.8")][8.8.8.8]]
-* Execute Command Line:   [[elisp:(bx:iimBash:cmndLineExec)][Run Cmnd Line]] | [[elisp:(bx:iimBash:cmndLineExec :wrapper "echo")][Echo Cmnd Line]]
-*      DNS Resolv Name      ::  [[elisp:(bx:bxpCmnd:cmndLineExec :name "dnsip" :aFqdn t)][dnsip aFqdn]]
-*      DNS Resolv IP-Addr   ::  [[elisp:(bx:bxpCmnd:cmndLineExec :name "dnsname" :aIpAddr t)][dnsname aIpAddr]] ||
-*         *lcaDnsReports -- bystarDnsReports -- Diagnostics, Verification, Probing, Information*  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
-**     Main Facilities:    [[elisp:(lsip-local-run-command "lcaDnsReport.sh")][lcaDnsReport.sh]]  [[elisp:(lsip-local-run-command "bystarDnsReport.sh")][bystarDnsReport.sh]]
-**         Brief Description Of Main Facilities:  [[elisp:(lsip-local-run-command "bystarDnsReport.sh -i dnsSeeAlso")][bystarDnsReport.sh -i dnsSeeAlso]]
-**     ============  Diagnostics
-***        lcaDnsReport.sh -h -v -n showRun -i diagFull persoarabic.org
-* http://cr.yp.to/djbdns/debugging.html
-* dnsip www.neda.com
-* dnsname 198.62.92.134
-* dnsmx 198.62.92.134
-* [[elisp:(lsip-local-run-command "dnsmx example.com | cut -d ' ' -f 2 | xargs dnsip")][dnsmx example.com | cut -d ' ' -f 2 | xargs dnsip]]
-* dnsqr any byname.net
-* dnsq any byname.net 198.62.92.1
-* cd /etc/tinydns/root; tinydns-get ns example.com
-* cd /etc/tinydns/root; tinydns-get any example.com ipAddr
-* --- Other Resoling Agents ---
-* host www.example.com
-* echo "dig -x 198.62.92.10"
-* echo "dig www.neda.com"
-* apt-get install fpdns
-* fpdns 198.62.92.1  # fingerPrint revision
+
+* [[elisp:(org-shifttab)][<)]] E|
+####+END:
+####+BEGIN: blee:bxPanel:runResult :outLevel 1  :command "cd /etc/sv/tinydns/root; tinydns-get ns by-star.net"  :results "stdout" :comment "" :afterComment ""
+* [[elisp:(show-all)][(>]] [[elisp:(blee:menu-sel:outline:popupMenu)][+-]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]]     [[elisp:(org-cycle)][| /stdout Results:/ |]]  [[elisp:(blee:org-update-named-dblocks-above)][D-Run]] :: [[elisp:(lsip-local-run-command "cd /etc/sv/tinydns/root; tinydns-get ns by-star.net")][cd /etc/sv/tinydns/root; tinydns-get ns by-star.net]] *|*  == *|*    |
+Last Executed at: 202403-03-18:20:03  by: bystar on: HSS-1008
+----------------------------
+2 by-star.net:
+64 bytes, 1+1+0+1 records, response, authoritative, noerror
+query: 2 by-star.net
+answer: by-star.net 259200 NS a.ns.by-star.net
+additional: a.ns.by-star.net 259200 A 192.168.0.148
+
+* [[elisp:(org-shifttab)][<)]] E|
+####+END:
+####+BEGIN: blee:bxPanel:runResult :outLevel 1  :command "cd /etc/sv/tinydns/root; tinydns-get ns by-star.net 127.0.0.1"  :results "stdout" :comment "specify ipAddr" :afterComment ""
+* [[elisp:(show-all)][(>]] [[elisp:(blee:menu-sel:outline:popupMenu)][+-]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]]     [[elisp:(org-cycle)][| /stdout Results:/ |]]  [[elisp:(blee:org-update-named-dblocks-above)][D-Run]] :: [[elisp:(lsip-local-run-command "cd /etc/sv/tinydns/root; tinydns-get ns by-star.net 127.0.0.1")][cd /etc/sv/tinydns/root; tinydns-get ns by-star.net 127.0.0.1]] *|*  =specify ipAddr= *|*    |
+Last Executed at: 202403-03-18:21:48  by: bystar on: HSS-1008
+----------------------------
+2 by-star.net:
+64 bytes, 1+1+0+1 records, response, authoritative, noerror
+query: 2 by-star.net
+answer: by-star.net 259200 NS a.ns.by-star.net
+additional: a.ns.by-star.net 259200 A 192.168.0.148
+
+* [[elisp:(org-shifttab)][<)]] E|
+####+END:
+
 
 ####+BEGIN: blee:bxPanel:separator :outLevel 1
 * /[[elisp:(beginning-of-buffer)][|^]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]] [[elisp:(delete-other-windows)][|1]]/
