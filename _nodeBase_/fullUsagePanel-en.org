@@ -72,7 +72,7 @@
 *       *BUE+BACS -- Web Content Development*                    [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/webDev")][Web Content Development]]
 *       *BACS -- Web Service Agents*                             [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxWebServices")][Web Server and Site Services]]
 *       *BUE  -- Galleria / Slider*                              [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/galleria")][Galleria / Sliders]]
-*       *BUE  -- Genealogy*                                      [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/genealogy")][Genealogy / Geneweb]]
+*       *BUE  -- Genealogy*                                      [[elisp:(blee:bnsm:panel-goto "/bisos/panels/bisos-svcs/geneweb/_nodeBase_/")][Genealogy / Geneweb]]
 *       *BACS -- WebMail (Squirrelmail)*                         [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/bxServices/servicesManage/bxWebMail")][WebMail (Squirrelmail) Panel]]
 *       *BUE  -- Perl Gallery v1 -- Obsoleted By Galleria*       [[elisp:(blee:bnsm:panel-goto "/libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/perlGallery")][Perl Gallery]]
 *      ================          /Document Processing/

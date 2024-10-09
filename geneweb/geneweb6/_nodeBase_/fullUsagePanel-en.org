@@ -1,0 +1,244 @@
+* B|
+####+BEGIN: bxPanel:common/title-plus
+#+title: geneweb/geneweb6
+#+roam_tags: branch
+#+roam_key: bisos-svcs/geneweb/geneweb6
+[[roam:bisos-svcs/geneweb]]
+####+END
+####+BEGIN: blee:bxPanel:topPanelControls
+*  [[elisp:(org-cycle)][|#Control|]] :: [[elisp:(blee:bnsm:menu-back)][Back]] [[elisp:(toggle-read-only)][read/wr]] | [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][Overview]]  [[elisp:(progn (org-shifttab) (org-content))][Content]] | [[elisp:(delete-other-windows)][(1)]] | [[elisp:(progn (save-buffer) (kill-buffer))][S&Q]] [[elisp:(save-buffer)][Save]] [[elisp:(kill-buffer)][Quit]] [[elisp:(bury-buffer)][Bury]]  [[elisp:(magit)][Magit]]  [[elisp:(org-cycle)][| ]]
+**  [[elisp:(bap:magit:bisos:current-bpo-repos/visit)][BPO-Repos-Magit]] ||
+**  [[elisp:(blee:buf:re-major-mode)][Re-Major-Mode]] ||  [[elisp:(org-dblock-update-buffer-bx)][Update Buf Dblocks]] || [[elisp:(org-dblock-bx-blank-buffer)][Blank Buf Dblocks]] || [[elisp:(bx:panel:variablesShow)][bx:panel:variablesShow]]
+**  [[elisp:(blee:menu-sel:comeega:maintenance:popupMenu)][||Maintenance]]
+**  This File :: *= /bisos/panels/bisos-svcs/geneweb/geneweb6/_nodeBase_/fullUsagePanel-en.org =*
+* /file-truename:/  /bisos/git/auth/bxRepos/blee-binders/bisos-svcs/geneweb/geneweb6/_nodeBase_/fullUsagePanel-en.org
+*  [[elisp:(org-cycle)][|#Select|]]  :: (Results: [[elisp:(blee:bnsm:results-here)][Here]] | [[elisp:(blee:bnsm:results-split-below)][Below]] | [[elisp:(blee:bnsm:results-split-right)][Right]] | [[elisp:(blee:bnsm:results-other)][Other]] | [[elisp:(blee:bnsm:results-popup)][Popup]]) (Select:  [[elisp:(lsip-local-run-command "lpCurrentsAdmin.sh -i currentsGetThenShow")][Show Currents]]  [[elisp:(lsip-local-run-command "lpCurrentsAdmin.sh")][lpCurrentsAdmin.sh]] ) [[elisp:(org-cycle)][| ]]
+**  #See:  (Window: [[elisp:(blee:bnsm:results-window-show)][?]] | [[elisp:(blee:bnsm:results-window-set 0)][0]] | [[elisp:(blee:bnsm:results-window-set 1)][1]] | [[elisp:(blee:bnsm:results-window-set 2)][2]] | [[elisp:(blee:bnsm:results-window-set 3)][3]] ) || [[elisp:(lsip-local-run-command-here "echo pushd dest")][echo pushd dir]] || [[elisp:(lsip-local-run-command-here "lsf")][lsf]] || [[elisp:(lsip-local-run-command-here "pwd")][pwd]] |
+**  [[elisp:(org-cycle)][|#Destinations|]] :: [[Evolution]] | [[Maintainers]]  [[elisp:(org-cycle)][| ]]
+**  #See:  [[elisp:(bx:bnsm:top:panel-blee)][Blee]] | [[elisp:(bx:bnsm:top:panel-listOfDocs)][All Docs]]  E|
+####+END
+####+BEGIN: blee:bxPanel:title :panelType "=bxPanel=" :title "auto"
+* [[elisp:(show-all)][(>]] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+*   [[img-link:file:/bisos/blee/env/images/fpfByStarElipseTop-50.png][http://www.freeprotocols.org]]_ _   ~Node:: bisos-svcs/geneweb -- geneweb6~   [[img-link:file:/bisos/blee/env/images/fpfByStarElipseBottom-50.png][http://www.by-star.net]]
+* ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  [[elisp:(org-shifttab)][<)]] E|
+####+END:
+####+BEGIN: blee:bxPanel:terseTreeNavigator :panelsList "bxPanel"
+* [[elisp:(show-all)][(>]] [[elisp:(describe-function 'org-dblock-write:blee:bxPanel:terseTreeNavigator)][dbf]]
+* +
+*                                        *━━━━━━━━━━━━━━━━━━━━━━━━*
+*   *Siblings*   :: [[elisp:(blee:bnsm:panel-goto "/bisos/panels/bisos-svcs/geneweb/geneweb6/_nodeBase_")][ =geneweb6= ]] *|*
+*   /Ancestors/  :: [[elisp:(blee:bnsm:panel-goto "//bisos/panels/bisos-svcs/geneweb/_nodeBase_")][ =geneweb= ]] *|* [[elisp:(blee:bnsm:panel-goto "//bisos/panels/bisos-svcs/_nodeBase_")][ =bisos-svcs= ]] *|* [[elisp:(blee:bnsm:panel-goto "//bisos/panels/_nodeBase_")][ = /<panels>/ = ]] *|* [[elisp:(dired "//bisos")][ ~bisos~ ]] *|*
+*                                   _━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━_                          [[elisp:(org-shifttab)][<)]] E|
+####+END
+####+BEGIN: blee:bxPanel:foldingSection :outLevel 1 :title "Overview and Use Cases" :anchor "Panel" :extraInfo "  /::Obsoleted By geneweb6::/ "
+* [[elisp:(show-all)][(>]]  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_  _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_       [[elisp:(outline-show-subtree+toggle)][| *Overview and Use Cases:* |]] <<Panel>>   /::Obsoleted By geneweb6::/   [[elisp:(org-shifttab)][<)]] E|
+####+END
+** +
+** This is the old geneweb6 taken from:
+** /libre/ByStar/InitialTemplates/activeDocs/blee/bystarContinuum/genealogy/fullUsagePanel-en.org
+** It will be transitioned to geneweb7.
+** -B|
+* +
+*  [[http://genealogy.bymemory.net/geneweb?b%3Dbanan][Genealogy]] -- family to remember to geneweb
+*  [[elisp:(org-cycle)][| ]]  [All]         ::      /[[elisp:(org-cycle)][IIMs Invoke and Visit Xrefs:]]/      *[[elisp:(org-cycle)][<<Xref-Geneweb>>]]*  [[elisp:(org-cycle)][| ]]
+**      ############
+**     [All]         ::       [[elisp:(lsip-local-run-command%20"lcaGenewebSvcUse.sh")][lcaGenewebSvcUse.sh]]            [[file:/opt/public/osmt/bin/lcaGenewebSvcUse.sh::Xref-Here-][Visit]] -- Applicability Of Service-Software to Platform
+**      ====[[elisp:(org-cycle)][Fold]]====  [All]   [[elisp:(lsip-local-run-command%20"lcaGenewebBinsPrep.sh")][lcaGenewebBinsPrep.sh]]          [[file:/opt/public/osmt/bin/lcaGenewebBinsPrep.sh::Xref-Here-][Visit]] -- Standard BinsPrep
+**      ====[[elisp:(org-cycle)][Fold]]====  [All]   [[elisp:(lsip-local-run-command%20"lcaGenewebAdmin.sh")][lcaGenewebAdmin.sh]]             [[file:/opt/public/osmt/bin/lcaGitManage.sh::Xref-Here-][Visit]] -- Service Management
+**      ====[[elisp:(org-cycle)][Fold]]====  [All]   [[elisp:(lsip-local-run-command%20"lcaGenewebActions.sh")][lcaGenewebActions.sh]]           [[file:/opt/public/osmt/bin/lcaGitoliteManage.sh::Xref-Here-][Visit]] -- Direct Management Of Genealogy DataBases
+**      ############
+**      ====[[elisp:(org-cycle)][Fold]]====  [BSR]   [[elisp:(lsip-local-run-command%20"bsrGenewebManage.sh")][bsrGenewebManage.sh]]            [[file:/opt/public/osmt/bin/bsrGenewebManage.sh::Xref-Here-][Visit]] -- BxSO's Geneweb Database Services Management
+**      ====[[elisp:(org-cycle)][Fold]]====  [BSR]   [[elisp:(lsip-local-run-command%20"bsrA2GenewebManage.sh")][bsrA2GenewebManage.sh]]          [[file:/opt/public/osmt/bin/bsrA2GenewebManage.sh::Xref-Here-][Visit]] -- BxSO's Geneweb A2VirDom Management
+**      ====[[elisp:(org-cycle)][Fold]]====  [BSR]   [[elisp:(lsip-local-run-command%20"bsrDnsGenewebManage.sh")][bsrDnsGenewebManage.sh]]         [[file:/opt/public/osmt/bin/bystarGitoliteManage.sh::Xref-Here-][Visit]] -- Bsr's DNS Assignment/Management
+**      ############    To Be Obsoleted
+**      ====[[elisp:(org-cycle)][Fold]]====  [All]   [[elisp:(lsip-local-run-command%20"bystarGenewebAdmin.sh")][bystarGenewebAdmin.sh]]          [[file:/opt/public/osmt/bin/bystarGitoliteManage.sh::Xref-Here-][Visit]] -- BxSO's Geneweb Virtual Domain Management
+*      ================
+*      ################                *Overview*
+*  [[elisp:(org-cycle)][| ]]  [All]         ::      /[[elisp:(org-cycle)][Model, Info and Pointers:]]/  [[elisp:(org-cycle)][| ]]
+**     /[[elisp:(org-cycle)][Terminology And Model]]/  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+   Geneweb is web software used to document family
+   trees. In order to create families within a
+   family however, you must first make the two families and then create a
+   link a person (ie. one man's parents and all their children, and his
+   wife and all their kids may be connected by him.)
+
+   Also See How TOs below -- Geneweb  Usage: Procedures -- How Tos
+
+**     /[[elisp:(org-cycle)][Design Note]]/  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+    - Based on bystarUid, create a new dataBase
+             /var/lib/geneweb/sa-xxxx
+
+    - Create a temp gedcom file in /tmp/
+        vis_initialLoad
+
+        The initial gedcom file is created by
+        hand entry into geneweb
+        Then the template is extracted with
+          gwb2ged -o sa-xxxx.ged sa-xxxx
+
+    - Import the gedcom file into /var/lib/geneweb/sa-xxxx
+      vis_initialLoad
+
+          ged2gwb -o sa-xxxx /tmp/gedcomTmpInit
+
+     - Setup Access Control Files
+
+     - Setup DNS and apache Redirects
+
+*      ================
+*  [[elisp:(beginning-of-buffer)][Top]] ################                *Geneweb User/Usage: Procedures -- How Tos*
+*  [[elisp:(org-cycle)][| ]]  [User]        ::      /[[elisp:(org-cycle)][Printing]]/  [[elisp:(org-cycle)][| ]]
+**      ====[[elisp:(org-cycle)][Fold]]====  Segmented Printing -- Desc |
+    B) How do I print the family tree?
+
+Go to a some one with lots of decedents.
+Click on "Tree" choose great-grand-children or deeper.
+
+When the tree is displayed.
+
+Click on "//"
+
+Set the parameters as below for landscape.
+
+Perhaps there is a bug with the 3rd page printing in
+landscape where the font size is wrong.
+
+
+From: darshi
+Subject: Gene Web Printing
+Date: Thu, 23 Jun 2005 11:12:13 -0700
+
+When printing a family tree with Geneweb, dont
+use legal paper. The printout becomes compressed
+and the order of children and grand-children do
+not aline to their parents. Use normal paper and
+put it on landscape. I found that the settings
+slice-width: 128, overlap: 10, and total width 355
+work the best. This will show you half of Jean
+Mohsen's children on the first page and then
+continue onto the next. I think that the slice
+width changes the font hieght and decides how tall
+the tree will be while the total width controls
+how much of the tree is on the first page. The
+overlap decides how much of the first page will
+show on the second page. A large overlap gives
+greater room for error when cutting while a
+smaller overlap makes it so that less space is
+used up by the tree on the paper.
+
+**      ====[[elisp:(org-cycle)][Fold]]====  Long Printing -- Descendents Tree
+***      ==[[elisp:(org-cycle)][Fold]]== Create the multi-generation tree (Tree (4Gen) + Pictures)
+***      ==[[elisp:(org-cycle)][Fold]]== Determine the Aspect Ratio (F12, scrol top top left, Top Table, will show you full X,Y)
+***      ==[[elisp:(org-cycle)][Fold]]== PDF File Generation (5 Generations, 16 inches)
+	- With Height As 16 inches and Aspect Ratio, Determine  Width
+	- Create a Custom Paper Size With Height And Width in the Print-To-File Printer
+	- From the browser -- print to file -- pdf, Custom Size
+***      ==[[elisp:(org-cycle)][Fold]]== Specialized PDF File Printing Services
+	- Put Your pdf file on a USB to take it to Fedex
+	- They charge by square foot based on type of paper and lamination, etc.
+**** NOT Used --     http://www.ancestryprinting.com/familytree.html  Please call us at 630-653-8400 or e-mail us at sales@ancestryprinting.com
+*  [[elisp:(org-cycle)][| ]]  [User]        ::      /[[elisp:(org-cycle)][Photos Normalization]]/  [[elisp:(org-cycle)][| ]]
+** TODO ====[[elisp:(org-cycle)][Fold]]====  Build on /opt/public/osmt/bin/bueGimpManage.sh |
+   Height should be 400 pixcels.
+   Look at bystarPlone3GalleriaManage.sh for examples
+*  [[elisp:(org-cycle)][| ]]  [User]        ::      /[[elisp:(org-cycle)][Conversions]]/   [[elisp:(org-cycle)][| ]]
+**      ====[[elisp:(org-cycle)][Fold]]==== Convert To Gedcom
+    A) How Do I convert to gedcom?
+       ged2gwb and gwb2ged
+
+*      ================
+*  [[elisp:(beginning-of-buffer)][Top]] ################                *Geneweb (Server) Provider: Procedures -- How Tos*
+*  [[elisp:(org-cycle)][| ]]  [BxP]         ::      /[[elisp:(org-cycle)][Platform Initial Setup -- At Platform Build]]/  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]]  [BsrP]        ::      /[[elisp:(org-cycle)][Bsr Porvider Initial Setup -- At Biso Creation]]/  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+*  [[elisp:(org-cycle)][| ]]  [BsrP]        ::      /[[elisp:(org-cycle)][bsrGenewebManage.sh]]/  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+**      ############
+**      ====[[elisp:(org-cycle)][Fold]]====  IIM    [[elisp:(lsip-local-run-command "bsrGenewebManage.sh")][bsrGenewebManage.sh]]
+**      ====[[elisp:(org-cycle)][Fold]]====  visitUrl  |
+***      ==[[elisp:(org-cycle)][Fold]]==  Current     [[elisp:(lsip-local-run-command "bsrGenewebManage.sh -h -v -n showRun  -i visitUrl")][bsrGenewebManage.sh -i visitUrl]]
+**      ====[[elisp:(org-cycle)][Fold]]====  genewebInSrBaseInfo, genewebToSrBase  |
+***      ==[[elisp:(org-cycle)][Fold]]==  Current     [[elisp:(lsip-local-run-command "bsrGenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default -p dbase=banan -i genewebInSrBaseInfo")][bsrGenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default -p dbase=banan -i genewebInSrBaseInfo]]
+***      ==[[elisp:(org-cycle)][Fold]]==  Current     [[elisp:(lsip-local-run-command "bsrGenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default -p dbase=banan -i genewebToSrBase")][bsrGenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default -p dbase=banan -i genewebToSrBase]]
+**      ====[[elisp:(org-cycle)][Fold]]====  _NB_  genewebFromSrBase |
+***      ==[[elisp:(org-cycle)][Fold]]==  Current     [[elisp:(lsip-local-run-command "echo bsrGenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default -p dbase=banan -i genewebFromSrBase")][echo bsrGenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default -p dbase=banan -i genewebFromSrBase]]
+*  [[elisp:(org-cycle)][| ]]  [BsrP]        ::      /[[elisp:(org-cycle)][bsrA2GenewebManage.sh]]/  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+**      ############
+**      ====[[elisp:(org-cycle)][Fold]]====  IIM    [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh")][bsrA2GenewebManage.sh]]
+**      ============
+**      ====[[elisp:(org-cycle)][Fold]]====  visitUrl (bsrA2GenewebManage.sh) |
+***      ==[[elisp:(org-cycle)][Fold]]==  Current     [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i visitUrl")][bsrA2GenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i visitUrl]]
+*  [[elisp:(org-cycle)][| ]]  [BsrP]        ::      /[[elisp:(org-cycle)][Server Monitoring: Logs Analysis, Stop-Start]]/  [[elisp:(beginning-of-buffer)][Top]]  [[elisp:(org-cycle)][| ]]
+**      ############
+**      ============    /bsrGenewebManage.sh/
+**      ====[[elisp:(org-cycle)][Fold]]====  Logs Analysis (bsrGenewebManage.sh) |
+***      ==[[elisp:(org-cycle)][Fold]]==  Current     [[elisp:(lsip-local-run-command "bsrGenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default -i bxSvcLogFilesList")][bsrGenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default -i bxSvcLogFilesList]]
+***      ==[[elisp:(org-cycle)][Fold]]==  Prompt      [[elisp:(lsip-local-run-command "bsrGenewebManage.sh -h -v -n showRun -p bystarUid=prompt -p sr=iso/sr/geneweb/default -i bxSvcLogFilesList")][bsrGenewebManage.sh -p bystarUid=prompt -p sr=iso/sr/geneweb/default -i bxSvcLogFilesList]]
+***      ========
+***      ==[[elisp:(org-cycle)][Fold]]==  Current     [[elisp:(lsip-local-run-command "bsrGenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default -i bxSvcLogTail")][bsrGenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default -i bxSvcLogTail]]
+***      ==[[elisp:(org-cycle)][Fold]]==  Prompt      [[elisp:(lsip-local-run-command "bsrGenewebManage.sh -h -v -n showRun -p bystarUid=prompt -p sr=iso/sr/geneweb/default -i bxSvcLogTail")][bsrGenewebManage.sh -p bystarUid=prompt -p sr=iso/sr/geneweb/default -i bxSvcLogTail]]
+**      ====[[elisp:(org-cycle)][Fold]]====  Stop/Start Services (bsrGenewebManage.sh)  |
+*** TODO ==[[elisp:(org-cycle)][Fold]]==  Current NOTYET    [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogFilesList")][bsrA2GenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxbxSvcLogFilesList]]
+*** TODO ==[[elisp:(org-cycle)][Fold]]==  Prompt  NOTYET    [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh -h -v -n showRun -p bystarUid=prompt -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogFilesList")][bsrA2GenewebManage.sh -p bystarUid=prompt -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxbxSvcLogFilesList]]
+
+**      ============    /bsrA2GenewebManage.sh/
+**      ====[[elisp:(org-cycle)][Fold]]====  Logs Analysis (bsrA2GenewebManage.sh) |
+***      ==[[elisp:(org-cycle)][Fold]]==  Current     [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogFilesList")][bsrA2GenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogFilesList]]
+***      ==[[elisp:(org-cycle)][Fold]]==  Prompt      [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh -h -v -n showRun -p bystarUid=prompt -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogFilesList")][bsrA2GenewebManage.sh -p bystarUid=prompt -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogFilesList]]
+***      ========
+***      ==[[elisp:(org-cycle)][Fold]]==  Current     [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogTail")][bsrA2GenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogTail]]
+***      ==[[elisp:(org-cycle)][Fold]]==  Prompt      [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh -h -v -n showRun -p bystarUid=prompt -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogTail")][bsrA2GenewebManage.sh -p bystarUid=prompt -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogTail]]
+**      ====[[elisp:(org-cycle)][Fold]]====  Stop/Start Services (bsrA2GenewebManage.sh) |
+*** TODO ==[[elisp:(org-cycle)][Fold]]==  Current NOTYET    [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh -h -v -n showRun -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogFilesList")][bsrA2GenewebManage.sh -p bystarUid=current -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxbxSvcLogFilesList]]
+*** TODO ==[[elisp:(org-cycle)][Fold]]==  Prompt  NOTYET    [[elisp:(lsip-local-run-command "bsrA2GenewebManage.sh -h -v -n showRun -p bystarUid=prompt -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxSvcLogFilesList")][bsrA2GenewebManage.sh -p bystarUid=prompt -p sr=iso/sr/geneweb/default/a2VirDoms/main -i bxbxSvcLogFilesList]]
+* +
+* -B|
+####+BEGIN: blee:bxPanel:separator :outLevel 1
+* /[[elisp:(beginning-of-buffer)][|^]] [[elisp:(blee:menu-sel:navigation:popupMenu)][==]] [[elisp:(delete-other-windows)][|1]]/
+####+END
+####+BEGIN: blee:bxPanel:evolution
+* [[elisp:(show-all)][(>]] [[elisp:(describe-function 'org-dblock-write:blee:bxPanel:evolution)][dbf]]
+*                                   _━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━_
+* [[elisp:(show-all)][|n]]  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_  _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_     [[elisp:(org-cycle)][| *Maintenance:* | ]]  [[elisp:(blee:menu-sel:agenda:popupMenu)][||Agenda]]  <<Evolution>>  [[elisp:(org-shifttab)][<)]] E|
+####+END
+####+BEGIN: blee:bxPanel:foldingSection :outLevel 2 :title "Notes, Ideas, Tasks, Agenda" :anchor "Tasks"
+** [[elisp:(show-all)][(>]]  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_  _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_       [[elisp:(outline-show-subtree+toggle)][| /Notes, Ideas, Tasks, Agenda:/ |]] <<Tasks>>   [[elisp:(org-shifttab)][<)]] E|
+####+END
+*** TODO Some Idea
+####+BEGIN: blee:bxPanel:evolutionMaintainers
+** [[elisp:(show-all)][(>]] [[elisp:(describe-function 'org-dblock-write:blee:bxPanel:evolutionMaintainers)][dbf]]
+** [[elisp:(show-all)][|n]]  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_  _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_       [[elisp:(org-cycle)][| /Bug Reports, Development Team:/ | ]]  <<Maintainers>>
+***  Problem Report                       ::   [[elisp:(find-file "")][Send debbug Email]]
+***  Maintainers                          ::   [[bbdb:Mohsen.*Banan]]  :: http://mohsen.1.banan.byname.net  E|
+####+END
+* B|
+####+BEGIN: blee:bxPanel:footerPanelControls
+* [[elisp:(show-all)][(>]] ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+* /Footer Controls/ ::  [[elisp:(blee:bnsm:menu-back)][Back]]  [[elisp:(toggle-read-only)][toggle-read-only]]  [[elisp:(show-all)][Show-All]]  [[elisp:(org-shifttab)][Cycle Glob Vis]]  [[elisp:(delete-other-windows)][1 Win]]  [[elisp:(save-buffer)][Save]]   [[elisp:(kill-buffer)][Quit]]  [[elisp:(org-shifttab)][<)]] E|
+####+END
+####+BEGIN: blee:bxPanel:footerOrgParams
+* [[elisp:(show-all)][(>]] [[elisp:(describe-function 'org-dblock-write:blee:bxPanel:footerOrgParams)][dbf]]
+* [[elisp:(show-all)][|n]]  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_  _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_     [[elisp:(org-cycle)][| *= Org-Mode Local Params: =* | ]]
+#+STARTUP: overview
+#+STARTUP: lognotestate
+#+STARTUP: inlineimages
+#+SEQ_TODO: TODO WAITING DELEGATED | DONE DEFERRED CANCELLED
+#+TAGS: @desk(d) @home(h) @work(w) @withInternet(i) @road(r) call(c) errand(e)
+#+CATEGORY: N:geneweb6
+
+####+END
+####+BEGIN: blee:bxPanel:footerEmacsParams :primMode "org-mode"
+* [[elisp:(show-all)][(>]] [[elisp:(describe-function 'org-dblock-write:blee:bxPanel:footerEmacsParams)][dbf]]
+* [[elisp:(show-all)][|n]]  _[[elisp:(blee:menu-sel:outline:popupMenu)][±]]_  _[[elisp:(blee:menu-sel:navigation:popupMenu)][Ξ]]_     [[elisp:(org-cycle)][| *= Emacs Local Params: =* | ]]
+# Local Variables:
+# eval: (setq-local toc-org-max-depth 4)
+# eval: (setq-local ~selectedSubject "noSubject")
+# eval: (setq-local ~primaryMajorMode 'org-mode)
+# eval: (setq-local ~blee:panelUpdater nil)
+# eval: (setq-local ~blee:dblockEnabler nil)
+# eval: (setq-local ~blee:dblockController "interactive")
+# eval: (img-link-overlays)
+# eval: (set-fill-column 115)
+# eval: (blee:fill-column-indicator/enable)
+# eval: (bx:load-file:ifOneExists "./panelActions.el")
+# End:
+
+####+END

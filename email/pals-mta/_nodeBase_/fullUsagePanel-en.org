@@ -261,7 +261,7 @@ just the way major service providers seem to do it.
 **  [[elisp:(org-cycle)][| ]]  P465-SMTPS            ::  [[elisp:(lsip-local-run-command%20"openssl s_client -crlf -connect localhost:465 -quiet")][openssl s_client -crlf -connect localhost:465 -quiet]]  # Secure SMTP over SSL --ehlo localhost -- quit (to end) [[elisp:(org-cycle)][| ]]
 **  [[elisp:(org-cycle)][| ]]  P465-SMTPS            ::  [[elisp:(lsip-local-run-command%20"mconnect localhost 465")][mconnect localhost 465]]                             # Does Not Connect
 **  [[elisp:(org-cycle)][| ]]  P587-SUBMISSION       ::  [[elisp:(lsip-local-run-command%20"openssl s_client -crlf -connect localhost:587 -quiet")][openssl s_client -crlf -connect localhost:587 -quiet]]  # Submission SMTP over SSL --ehlo localhost -- quit (to end) [[elisp:(org-cycle)][| ]]
-**  [[elisp:(org-cycle)][| ]]  P587-SUBMISSION       ::  [[elisp:(lsip-local-run-command%20"mconnect localhost 587")][mconnect localhost 587]]
+**  [[elisp:(org-cycle)][| ]]  P587-SUBMISSION       ::  [[elisp:(lsip-local-run-command "mconnect localhost 587")][mconnect localhost 587]]
 **      ============
 **  [[elisp:(org-cycle)][| ]]  CheckTLS              ::  http://checktls.com/perl/TestReceiver.pl?FULL        # Web Service That Can Test A Config    [[elisp:(org-cycle)][| ]]
 **  [[elisp:(beginning-of-buffer)][Top]] ############ [[elisp:(delete-other-windows)][(1)]]   Mail Access Panel
